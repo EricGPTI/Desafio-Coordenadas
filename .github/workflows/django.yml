@@ -34,25 +34,24 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Copying configurations
-          run: |
-            sudo cp contrib/env-sample .env
+          run: cp contrib/env-sample .env
       - name: Preparing Server
         run: |
           sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python-dev python3-dev aria2 vim libnss3-tools python3-venv liblzma-dev
       - name: Install pipenv
-        run: |
-          python -m pip install --upgrade pip
-          pip install pipenv
+          run: |
+            python -m pip install --upgrade pip
+            pip install pipenv
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pipenv install --dev
+          run: |
+            python -m pip install --upgrade pip
+            pipenv install --dev
       - name: Run Django
-        run: |
-          pipenv run python manage.py test
+          run: |
+            pipenv run python manage.py test
       - name: Validation PEP8
-        run: |
-          pipenv run flake8 .
+          run: |
+            pipenv run flake8 .
       - name: Run Tests
-        run: |
-          pipenv run pytest --cov=api --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+          run: |
+            pipenv run pytest --cov=api --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
