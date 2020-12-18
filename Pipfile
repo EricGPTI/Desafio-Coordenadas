@@ -8,6 +8,11 @@ django = "==2.2"
 djangorestframework = "*"
 python-decouple = "*"
 gunicorn = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 flake8 = "*"
+pytest-django = "*"
+pytest-cov = "*"
+codecov = "*"
