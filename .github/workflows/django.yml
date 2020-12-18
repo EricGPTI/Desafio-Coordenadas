@@ -20,7 +20,7 @@ jobs:
 
     services:
       postgres:
-        image: 12.5
+        image: latest
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
