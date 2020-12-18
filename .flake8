@@ -1,0 +1,4 @@
+[flake8]
+max-complexity = 10
+max-line-lenght = 120
+exclude = venv, .venv

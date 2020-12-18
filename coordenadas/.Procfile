@@ -1,0 +1,1 @@
+web: gunicorn coordenadas.wsgi --log-file -
