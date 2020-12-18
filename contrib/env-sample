@@ -1,0 +1,4 @@
+SECRET_KEY = ^6+%t#h)albl@%f(fh=oax*k78m$-_r^n)ll38xq*(1m9)r1ko
+DEBUG = True
+ALLOWED_HOSTS = localhost, 127.0.0.1
+DATABASE_URL = postgres://postgres:postgres@localhost/postgres
