@@ -117,3 +117,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+
+class Position(models.Model):
+    """
+    Modelo para armazenamento de Coordenadas.
+    """
+    x = models.IntegerField()
+    y = models.IntegerField()
+    face = models.CharField(max_length=10)
+    start = models.CharField(max_length=10)
+    last_position = models.CharField(max_length=10)
