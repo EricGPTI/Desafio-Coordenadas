@@ -1,6 +1,3 @@
-from django.shortcuts import render
-from rest_framework import generics, mixins, viewsets
-from rest_framework.generics import get_object_or_404
 from .models import Position
 from .classes.moviments import Moviment
 from .serializer import PositionSerializer
@@ -30,4 +27,3 @@ def atual(request):
         serializer = PositionSerializer(atual, many=True)
         coordenada_atual = serializer.data[0].get('last_position')
         return Response(coordenada_atual)
-

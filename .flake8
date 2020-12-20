@@ -1,5 +1,5 @@
 [flake8]
 max-complexity = 10
 max-line-lenght = 120
-exclude = venv, .venv
+exclude = venv, .venv, *\tests
 ignore = E501,E261
