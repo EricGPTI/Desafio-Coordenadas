@@ -1,4 +1,4 @@
-from ..models import Moviment
+from .models import Moviment
 
 POSITION = {
     270: 'Esquerda',
