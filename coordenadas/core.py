@@ -1,11 +1,4 @@
-from .models import Moviment
-
-POSITION = {
-    270: 'Esquerda',
-    180: 'Baixo',
-    90: 'Direita',
-    0: 'Cima'
-}
+from coordenadas.classes.spin import Spin
 
 COMMANDS = {'GE': 'Girar_Esquesda',
             'GD': 'Girar_Direita',
@@ -19,7 +12,8 @@ MATRIZ = [[(0, 4), (1, 4), (2, 4), (3, 4), (4, 4)],
           [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0)]]
 
 
-def test_matriz_limites(comandos, contador=0) -> list:
+def process_data(actions): # actions = ["GE", "GE", "M"]
+    """Aqui devo pegar os dados vindso do banco de dados."""
     x = MATRIZ[4][0][0]
     y = MATRIZ[4][0][1]
     f = 90
@@ -27,12 +21,13 @@ def test_matriz_limites(comandos, contador=0) -> list:
     new_position = []
     old_position = []
 
-    movement = Moviment(coordinates)
+    movement = Spin(coordinates)
 
-    for action in coordinates:
+    for action in actions:
         if action == 'GE':
             f = movement.ge() # 0
-            print(f)
+            coordinates[2] = f
+            return coordinates[2]
 
         #    start_position[2] = ge(start_position[2]) # [0,0,0]
         #    contador += 1 if contador < len(comandos) else contador

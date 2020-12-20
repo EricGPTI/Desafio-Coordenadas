@@ -1,5 +1,5 @@
 from .models import Position
-from .classes.moviments import Moviment
+from coordenadas.core import process_data
 from .serializer import PositionSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -27,3 +27,15 @@ def atual(request):
         serializer = PositionSerializer(atual, many=True)
         coordenada_atual = serializer.data[0].get('last_position')
         return Response(coordenada_atual)
+
+
+@api_view(['POST'])
+def movement(request):
+    if request.method == 'POST':
+        actions = request.data['movimentos']
+        moviments = [x.upper() for x in actions]
+        response_moviment = process_data(moviments)
+        return Response('Movimentação Feita.') # Devo retornar a posição atual após ação executada com sucesso
+
+
+
