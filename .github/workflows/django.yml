@@ -52,7 +52,7 @@ jobs:
           pipenv run flake8 .
       - name: Run Tests
         run: |
-          pipenv run pytest api --cov=api
+          pipenv run pytest --cov=tests
           pipenv run pytest coordenadas --cov=coordenadas
       - name: Posting Coverage
         env:
