@@ -49,18 +49,3 @@ jobs:
       - name: Validation PEP8
         run: |
           pipenv run flake8 .
-      - name: Run Tests
-        run: |
-          pipenv run pytest --cov=tests
-      - name: Posting Coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: CODECOV_TOKEN="b5738cd3-5ce3-4df5-af5a-ca2dcd99ca9e
-          file: ./coverage.xml
-          files: ./coverage1.xml,./coverage2.xml
-          directory: ./coverage/reports/
-          flags: pytest-cov
-          env_vars: OS,PYTHON
-          name: codecov-umbrella
-          fail_ci_if_error: true
-          path_to_write_report: ./coverage/codecov_report.txt
