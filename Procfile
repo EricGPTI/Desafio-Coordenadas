@@ -1,1 +1,1 @@
-web: python coordenadas.py
+web: guinicorn coordenadas.wsgi
