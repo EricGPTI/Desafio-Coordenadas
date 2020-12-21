@@ -1,1 +1,1 @@
-web: guinicorn coordenadas.wsgi
+web: guinicorn coordenadas.wsgi --lo-file -
