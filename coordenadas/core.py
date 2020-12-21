@@ -15,7 +15,6 @@ def process_data(actions):
         x = int(value.x)
         y = int(value.y)
         f = int(value.face)
-        last_position = value.last_position
 
     coordinates = [x, y, f]
     old_position = f'{x},{y},{f}'
