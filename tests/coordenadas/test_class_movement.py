@@ -27,3 +27,9 @@ class TestMoviment:
         movement = Moviment(coordenadas)
         mr = movement.move()
         assert mr[1] == 0
+
+    def test_move_limit(self):
+        coordenadas = [0, 0, 180]
+        movement = Moviment(coordenadas)
+        mr = movement.move()
+        assert mr[1] == 0

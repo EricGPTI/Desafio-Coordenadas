@@ -10,6 +10,7 @@ python-decouple = "*"
 gunicorn = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
+django-heroku = "*"
 
 [dev-packages]
 flake8 = "*"
