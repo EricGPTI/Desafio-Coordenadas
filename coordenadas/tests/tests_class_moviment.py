@@ -54,5 +54,5 @@ def test_spin_gd(act):
 act = ["GE", "M", "M", "GD", "M"]
 test_spin_ge(act)
 
-#act = ["GD", "GD", "GD"]
-#test_spin_gd(act)
+act = ["GD", "GD", "GD"]
+test_spin_gd(act)
