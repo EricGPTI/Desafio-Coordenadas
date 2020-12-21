@@ -123,8 +123,8 @@ class Position(models.Model):
     """
     Modelo para armazenamento de Coordenadas.
     """
-    x = models.IntegerField()
-    y = models.IntegerField()
-    face = models.CharField(max_length=10)
-    start = models.CharField(max_length=10)
+    x = models.IntegerField(null=True)
+    y = models.IntegerField(null=True)
+    face = models.IntegerField(null=True)
+    start = models.CharField(max_length=10, default='0,0,90')
     last_position = models.CharField(max_length=10)
