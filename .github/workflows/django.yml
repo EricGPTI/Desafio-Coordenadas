@@ -49,7 +49,7 @@ jobs:
           pipenv install --dev
       - name: Run Django
         run: |
-          pipenv run python manage.py test
+          pipenv run python manage.py runserver
       - name: Validation PEP8
         run: |
           pipenv run flake8 .
