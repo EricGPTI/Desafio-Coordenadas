@@ -7,10 +7,17 @@ POSITION = {
 
 
 class Moviment:
+    """
+    Objeto para movimentação na Matriz.
+    """
     def __init__(self, coordenadas):
         self.coordenadas = coordenadas
 
     def validate_position(self):
+        """
+        Valida se nova posição não ultrapassa os limites do quadrante.
+        :return: Retorna nova posição ou mensagem de erro.
+        """
         error_message = 'Um movimento inválido foi identificado. ' \
                         'A sonda ultrapassou o limite da área de ' \
                         'contato e se perdeu.'
@@ -21,6 +28,11 @@ class Moviment:
             return (self.coordenadas)
 
     def move(self):
+        """
+        Executa a movimentação na matriz.
+        :return: Retorna nova posição ou mensagem de erro vindo do
+        método de validação da posição.
+        """
         face = self.coordenadas[2]
         if POSITION.get(face) == 'Direita':
             self.coordenadas[0] += 1
