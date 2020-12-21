@@ -1,4 +1,4 @@
-from ..models import Moviment
+from coordenadas.classes.moviment import Moviment
 
 POSITION = {
     270: 'Esquerda',
