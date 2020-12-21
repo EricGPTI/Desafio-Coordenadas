@@ -35,7 +35,7 @@ def movement(request):
         actions = request.data['movimentos']
         moviments = [x.upper() for x in actions]
         response_moviment = process_data(moviments)
-        return Response('Movimentação Feita.') # Devo retornar a posição atual após ação executada com sucesso
+        return Response(response_moviment) # Devo retornar a posição atual após ação executada com sucesso
 
 
 

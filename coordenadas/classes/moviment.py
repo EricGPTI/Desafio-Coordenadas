@@ -7,34 +7,37 @@ POSITION = {
 
 
 class Moviment:
-    def __init__(self, start):
-        self.start = start
+    def __init__(self, coordenadas):
+        self.coordenadas = coordenadas
 
     def validate_position(self):
         error_message = 'Um movimento inválido foi identificado. ' \
-                        'Sonda ultrapassou o limite da área de raise ' \
-                        'PositionalError  contato e se perdeu.'
-        success_message = 'A sonda se movimento com sucesso.'
+                        'A sonda ultrapassou o limite da área de ' \
+                        'contato e se perdeu.'
 
-        if self.start[0] or self.start[1] < 0 or self.start[0] or self.start[1] > 4:
-            return error_message, self.start
+        if self.coordenadas[0] < 0 or self.coordenadas[1] < 0 or self.coordenadas[0] > 4 or self.coordenadas[1] > 4:
+            return (error_message)
         else:
-            return success_message, self.start
+            return (self.coordenadas)
 
     def move(self):
-        face = self.start[2]
+        face = self.coordenadas[2]
         if POSITION.get(face) == 'Direita':
-            self.start[0] += 1
-            return self.validate_position(self)
+            self.coordenadas[0] += 1
+            new_coordinates = self.validate_position()
+            return new_coordinates
 
         elif POSITION.get(face) == 'Esquerda':
-            self.start[0] -= 1
-            return self.validate_position(self)
+            self.coordenadas[0] -= 1
+            new_coordinates = self.validate_position()
+            return new_coordinates
 
         elif POSITION.get(face) == 'Cima':
-            self.start[1] += 1
-            return self.validate_position(self)
+            self.coordenadas[1] += 1
+            new_coordinates = self.validate_position()
+            return new_coordinates
 
         elif POSITION.get(face) == 'Baixo':
-            self.start[1] -= 1
-            return self.validate_position(self)
+            self.coordenadas[1] -= 1
+            new_coordinates = self.validate_position()
+            return new_coordinates
