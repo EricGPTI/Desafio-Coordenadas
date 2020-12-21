@@ -16,10 +16,13 @@ MATRIZ = [[(0, 4), (1, 4), (2, 4), (3, 4), (4, 4)],
 
 def process_data(actions):
     """Aqui devo pegar os dados vindos do banco de dados."""
-    data = Position.objects.all()
-    x = MATRIZ[4][0][0]
-    y = MATRIZ[4][0][1]
-    f = 90
+    coordenadas = list(Position.objects.all())
+    for value in coordenadas:
+        x = int(value.x)
+        y = int(value.y)
+        f = int(value.face)
+        last_position = value.last_position
+    print(x, y, f, last_position)
     coordinates = [x, y, f]
     old_position = [x, y, f]
 

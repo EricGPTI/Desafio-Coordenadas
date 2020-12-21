@@ -10,7 +10,7 @@ def start(request):
     if request.method == 'POST':
         data = {'x': 0,
                 'y': 0,
-                'face': 'Direita',
+                'face': 90,
                 'start': '0,0,90',
                 'last_position': '0,0,90'
                 }

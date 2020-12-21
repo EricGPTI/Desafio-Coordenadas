@@ -125,6 +125,6 @@ class Position(models.Model):
     """
     x = models.IntegerField()
     y = models.IntegerField()
-    face = models.CharField(max_length=10)
+    face = models.IntegerField()
     start = models.CharField(max_length=10)
     last_position = models.CharField(max_length=10)
