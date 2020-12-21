@@ -4,7 +4,9 @@
 [![codecov](https://codecov.io/gh/EricGPTI/DesafioCredereCoordenadas/branch/main/graph/badge.svg?token=F5M23OLZUX)](https://codecov.io/gh/EricGPTI/DesafioCredereCoordenadas)
 ![Python](https://img.shields.io/badge/Python-3.6%20%7C%203.7%20%7C%203.8-blue)
 
-Desafio Backend Credere.
+## Desafio Backend Credere.
+**:Author: Eric Gomes**     
+**:E-Mail: ericgpti@gmail.com**
 
 # Rodando o Projeto Localhost
 ### Linux
