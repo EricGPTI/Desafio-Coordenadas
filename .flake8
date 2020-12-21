@@ -1,5 +1,5 @@
 [flake8]
 max-complexity = 10
 max-line-lenght = 120
-exclude = venv, .venv, tests/*, tests
+exclude = venv, .venv, tests/*, tests, *./django*
 ignore = E501,E261,W504
