@@ -56,6 +56,3 @@ def movement(request):
         moviments = [x.upper() for x in actions]
         response_moviment = process_data(moviments)
         return Response(response_moviment)
-
-
-
