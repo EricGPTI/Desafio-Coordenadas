@@ -15,11 +15,11 @@ class TestApi:
 
     def test_post_start_status_code(self):
         resp = requests.post(url=self.url[1], headers=self.headers, data="")
-        assert resp.status_code == 200
+        assert resp.status_code == 201
 
     def test_post_movement_status_code(self):
         movimento = {
             "movimentos": ["ge", "m", "m", "Gd", "M"]
         }
         resp = requests.post(url=self.url[2], headers=self.headers, data=movimento)
-        assert resp.status_code == 200
+        assert resp.status_code == 201
