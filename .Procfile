@@ -1,1 +1,1 @@
-web: gunicorn coordenadas.wsgi
+web: sh setup.sh && streamlit run coordenadas.wsgi
