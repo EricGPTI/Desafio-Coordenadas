@@ -46,16 +46,17 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pipenv install --dev
+          pipenv sync --dev
       - name: Run Django
         run: |
-          pipenv run python manage.py test
+          pipenv run python manage.py runserver
       - name: Validation PEP8
         run: |
           pipenv run flake8 .
       - name: Run Tests
         run: |
-          pipenv run pytest --cov=api
+          pipenv run pytest api --cov=api
+          pipenv run pytest coordenadas --cov=coordenadas
       - name: Posting Coverage
         env:
           CODECOV_TOKEN: "b5738cd3-5ce3-4df5-af5a-ca2dcd99ca9e"
