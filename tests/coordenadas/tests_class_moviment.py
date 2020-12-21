@@ -30,6 +30,7 @@ def test_spin_ge(act):
     f = 90
     start = [x, y, f]
     response = process_data(act)
+
     x = response[0]
     y = response[1]
     f = response[2]
